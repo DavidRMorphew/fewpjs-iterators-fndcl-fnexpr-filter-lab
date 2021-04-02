@@ -1,7 +1,5 @@
 function findMatching(driversArray, name){
-    return driversArray.filter( element => {
-        return element.toLowerCase() === name.toLowerCase()
-    })
+    return driversArray.filter( element => element.toLowerCase() === name.toLowerCase() )
 }
 
 function fuzzyMatch(driversArray, firstPartOfName){
@@ -10,4 +8,8 @@ function fuzzyMatch(driversArray, firstPartOfName){
         const truncatedName = element.slice(0, truncatedStringLength)
         return truncatedName === firstPartOfName
     })
+}
+
+function matchName(driversArray, nameString){
+    return driversArray.filter( driverObj => driverObj.name === nameString )
 }
