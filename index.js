@@ -7,7 +7,7 @@ function findMatching(driversArray, name){
 function fuzzyMatch(driversArray, firstPartOfName){
     return driversArray.filter( element => {
         const truncatedStringLength = firstPartOfName.length
-        const truncatedName = element.slice(0, truncatedStringLength - 1)
-        console.log(truncatedName)
+        const truncatedName = element.slice(0, truncatedStringLength)
+        return truncatedName === firstPartOfName
     })
 }
